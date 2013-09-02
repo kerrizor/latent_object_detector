@@ -1,13 +1,14 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'latent_object_detector'
 require 'latent_object_detector/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "latent_object_detector"
   spec.version       = LatentObjectDetector::VERSION
-  spec.authors       = ["Kerri Miller", "Corey Ehmke"]
-  spec.email         = ["kerrizor@kerrizor.com", "corey@idolhands.com"]
+  spec.authors       = ["Corey Ehmke", "Kerri Miller"]
+  spec.email         = ["corey@idolhands.com", "kerrizor@kerrizor.com"]
   spec.description   = %q{Flags frequently used words in method names as
                             possible latent concepts.}
   spec.summary       = %q{Based on an original idea from Corey, this gem looks
