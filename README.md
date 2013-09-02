@@ -1,5 +1,7 @@
 # LatentObjectDetector
 
+{<img src="https://secure.travis-ci.org/kerrizor/latent_object_detector.png" />}[http://travis-ci.org/kerrizor/latent_object_detector]
+
 Based on an original idea from Corey, this gem looks at the methods defined on an object and looks for repeated words contained in the method names, as this can sometimes illuminate latent objects, concepts, or relationships that don't currently exist in the code (but should.)
 
 ## Installation
