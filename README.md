@@ -1,4 +1,4 @@
-# LatentObjectDetector
+# Latent Object Detector
 
 [<img src="https://secure.travis-ci.org/kerrizor/latent_object_detector.png" />](http://travis-ci.org/kerrizor/latent_object_detector)
 
