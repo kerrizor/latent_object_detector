@@ -17,7 +17,7 @@ Gem::Specification.new do |spec|
                             this can sometimes illuminate latent objects,
                             concepts, or relationships that don't currently
                             exist in the code (but should.)}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/kerrizor/latent_object_detector"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
