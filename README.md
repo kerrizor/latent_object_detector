@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ## Usage
 ```
-d = LatentObjectDetector.for(User)
+d = LatentObjectDetector::Detector.for(User)
 d.potential_objects
 => ["password", "token", "remember"]
 d.suspicious_methods
