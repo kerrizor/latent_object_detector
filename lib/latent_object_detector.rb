@@ -13,12 +13,16 @@ module LatentObjectDetector
     end
 
     def suspicious_methods
-      methods_owned_by_klass.select{ |m| (words_in_method(m.to_s) & potential_objects).size > 0 }
+      @suspicious_methods ||=
+        methods_owned_by_klass.select{ |m| (words_in_method(m.to_s) & potential_objects).size > 0 }
     end
 
     def potential_objects
-      common_words = find_common_words_in(hash_of_words_used_in_methods)
-      words_used_more_than_twice(common_words)
+      @potential_objects ||=
+        begin
+          common_words = find_common_words_in(hash_of_words_used_in_methods)
+          words_used_more_than_twice(common_words)
+        end
     end
 
     private
@@ -27,10 +31,11 @@ module LatentObjectDetector
     end
 
     def hash_of_words_used_in_methods
-      methods_owned_by_klass.inject({}) do |hash, method|
+      @hash_of_words_used_in_methods ||=
+        methods_owned_by_klass.inject({}) do |hash, method|
         hash[method] = words_in_method(method)
         hash
-      end
+        end
     end
 
     def find_common_words_in(hash_of_words = hash_of_words_used_in_methods)
@@ -46,7 +51,8 @@ module LatentObjectDetector
     end
 
     def methods_owned_by_klass
-      all_instance_methods_of_klass.select{ |method| method_is_owned_by_klass? method }
+      @methods_owned_by_klass ||=
+        all_instance_methods_of_klass.select{ |method| method_is_owned_by_klass? method }
     end
 
     def method_is_owned_by_klass?(method)
