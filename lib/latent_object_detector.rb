@@ -50,7 +50,7 @@ module LatentObjectDetector
     end
 
     def method_is_owned_by_klass?(method)
-      self.klass.new.method(method).owner == self.klass
+      self.klass.instance_method(method).owner == self.klass
     end
 
     def all_instance_methods_of_klass
