@@ -7,8 +7,8 @@ require 'latent_object_detector/version'
 Gem::Specification.new do |spec|
   spec.name          = "latent_object_detector"
   spec.version       = LatentObjectDetector::VERSION
-  spec.authors       = ["Corey Ehmke", "Kerri Miller"]
-  spec.email         = ["corey@idolhands.com", "kerrizor@kerrizor.com"]
+  spec.authors       = ["Coraline Ada Ehmke", "Kerri Miller"]
+  spec.email         = ["coraline@idolhands.com", "kerrizor@kerrizor.com"]
   spec.description   = %q{Flags frequently used words in method names as
                             possible latent concepts.}
   spec.summary       = %q{Based on an original idea from Corey, this gem looks
